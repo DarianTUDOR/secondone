@@ -1,0 +1,35 @@
+<div>
+	<form style="color:white" name="searchUser" ng-submit="search(username)">
+		<input type="search" required placeholder="Username to find" ng-model="username"/>
+		<input type="submit" value="Search" />
+		<div ng-show="user">
+		<br>Order: 
+		<select ng-model="repoSortOrder">
+		<option value="+name">Name</option>
+		<option value="-stargazers_count">Stars</option>
+		<option value="+language">Language</option>
+		</div>
+	</select>
+	</form>
+	<hr align="left" width="238px" size="5px" color="#0099ff">
+	<div><h2>
+			Name: {{user.name}}<br/>
+			<img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+	</h2></div>
+	<table ng-show="user">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Stars</th>
+				<th>Language</th>
+			</tr>
+		<thead>
+		<tbody>
+			<tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+				<td>{{repo.name}}</td>
+				<td>{{repo.stargazers_count | number}}</td>
+				<td>{{repo.language}}</td>
+			</tr>
+		</tbody>
+</table>
+</div>

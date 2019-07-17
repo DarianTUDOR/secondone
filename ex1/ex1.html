@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <script type="text/javascript" src="route.js"></script>
+	<script type="text/javascript" src="java.js"></script>
+	<script type="text/javascript" src="github.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="design.css">
+	<title>User</title>
+	
+</head>
+<body ng-controller="Ctrl1">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a class="active" href="ex1.html">User</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a href="about.html">About</a></li>
+</ul>
+<h1>
+	<span>{{message}}</span>
+	<div ng-view></div>
+</h1>
+</body>
+<body>
+	<form style="color:white" name="searchUser" ng-submit="search(username)">
+		<input type="search" required placeholder="Username to find" ng-model="username"/>
+		<input type="submit" value="Search" ng-click="search(username)"/>
+		<div ng-show="user">
+		<br>Order: 
+		<select ng-model="repoSortOrder">
+		<option value="+name">Name</option>
+		<option value="-stargazers_count">Stars</option>
+		<option value="+language">Language</option>
+		</div>
+	</select>
+	</form>
+	<hr align="left" width="238px" size="5px" color="#0099ff">
+	<div><h2>
+			Name: {{user.name}}<br/>
+			<img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+	</h2></div>
+	<div ng-include="'table.html'"></div>
+	<br><button onclick="location.reload();">Search another user</button>
+	
+</body>
+</html>

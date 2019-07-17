@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="design2.css">
+	<script type="text/javascript" src="java.js"></script>
+	<script type="text/javascript" src="second.js"></script>
+	
+	<title>About</title>
+	
+</head>
+<body>
+	
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="ex1.html">User</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a class="active" href="about.html">About</a></li>
+</ul>
+	<div ng-controller="sec" style="text-align:center; font-size:30px; color:#002080"><br>Address: {{address}}</div>
+	<br/>
+	<a href="https://www.google.com/search?q=gif&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiMu5OB0ZPjAhUit3EKHXA2Ds8Q_AUIECgB&biw=1366&bih=657">
+	<img src="poze/123.gif" alt="gif" width="200" height="200" title="gif"></a>
+	<img src="poze/a.jpg" width="200" height="200" title="logo">
+	<div>Price is {{ 35 | currency:euro}}</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="design3.css">
+	<title>Contact</title>
+</head>
+<body>
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="ex1.html">User</a></li>
+  <li><a class="active" href="contact.html">Contact</a></li>
+  <li style="float:right"><a href="about.html">About</a></li>
+</ul>
+	<h1>
+		<span style="color:#70db70">For more info</span>
+	</h1>
+	<div style="font-size:30px; color:white">Tel: 021326751<br/>
+		 Fax: 345632134<br/>
+	</div>
+	
+	<p>
+	<a href="https://www.w3schools.com/html/"><span style="color:white">Visit our HTML tutorial</span></a>
+	</p>
+	<a href="https://www.w3schools.com">
+	<img src="poze/21.png" alt="logo" style="width:300px;height:150px"></a>
+	<h2>My First Google Map</h2>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(45.7473925,21.2274981),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>

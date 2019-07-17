@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="design1.css">
+	<script type="text/javascript" src="second.js"></script>
+	<title>Home</title>
+</head>
+<body ng-controller="sec">
+
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="ex1.html">User</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a href="about.html">About</a></li>
+</ul>
+	<div class="cities">
+		<h2>London</h2>
+			<p>London is the capital of England.</p>
+	</div>
+	<div class="cities">
+		<h2>Paris</h2>
+			<p>Paris is the capital of France.</p>
+	</div>
+
+	<div class="cities">
+		<h2>Tokyo</h2>
+			<p>Tokyo is the capital of Japan.</p>
+	</div>
+	<form style="color:blue">
+		<input class="textbox" type="number" required placeholder="Add a number" id="clicked" ng-model="nr" ng-disabled="IsDisabled"/>
+		<input class="button" type="button" value="SQRT" ng-click="calculate(nr); ShowMessage()"  ng-disabled="IsDisabled"/>
+		<div ng-show="IsDisabled"><span style="font-size:30px"> The response is {{nr}}</span>
+		<br><button class="button" onclick="location.reload();">Sqrt again</button></div><br/>
+	</form>
+	<br/><iframe src="https://en.wikipedia.org/wiki/Geography" height="400" width="1000"></iframe>
+	
+</body>
+</html>

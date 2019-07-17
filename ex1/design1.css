@@ -1,0 +1,63 @@
+
+body{
+	background: url(poze/home.jpg) no-repeat center fixed; 
+	background-size: cover;
+	
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #809fff;
+}
+
+.cities{
+	background-color: #8c8c8c;
+	color: black;
+	margin: 50px;
+	padding: 5px;
+}
+.button {
+  background-color: #ff3333; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.textbox {
+	font-family: inherit;
+	line-height:inherit;
+	color:#2e3750;
+	min-width:10em;
+}
+
+
+
